@@ -1,4 +1,3 @@
-
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "4.0.2"
@@ -13,9 +12,8 @@ module "vpc" {
   enable_dns_hostnames = true
   enable_dns_support   = true
 
-  enable_nat_gateway     = true
-  single_nat_gateway     = true
-  one_nat_gateway_per_az = false
+  enable_nat_gateway = true
+  single_nat_gateway = true
 
   private_subnet_tags = {
     "kubernetes.io/role/internal-elb" = 1
